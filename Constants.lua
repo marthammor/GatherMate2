@@ -289,7 +289,7 @@ local node_ids = {
 		[NL["Camouflaged Bismuth"]]				= 1220,
 		[NL["Crystallized Bismuth"]]			= 1221,
 		[NL["Weeping Bismuth"]]					= 1222,
-		[NL["Webbed Bismuth"]]					= 1223,
+		[NL["Webbed Bismuth"]]					= 1223, -- This isn't a node, its a spell. Webbed Ore Deposit object id 430335 contains Bismuth.
 		[NL["EZ-Mine Bismuth"]]					= 1224,
 		[NL["Bismuth Seam"]]					= 1225,
 
@@ -298,7 +298,7 @@ local node_ids = {
 		[NL["Camouflaged Aqirite"]]				= 1228,
 		[NL["Crystallized Aqirite"]]			= 1229,
 		[NL["Weeping Aqirite"]]					= 1230,
-		[NL["Webbed Aqirite"]]					= 1231,
+		[NL["Webbed Aqirite"]]					= 1231, -- This isn't a node, its a spell. Webbed Ore Deposit object id 430351 contains Aquirite.
 		[NL["EZ-Mine Aqirite"]]					= 1232,
 		[NL["Aqirite Seam"]]					= 1233,
 
@@ -307,9 +307,11 @@ local node_ids = {
 		[NL["Camouflaged Ironclaw"]]			= 1236,
 		[NL["Crystallized Ironclaw"]]			= 1237,
 		[NL["Weeping Ironclaw"]]				= 1238,
-		[NL["Webbed Ironclaw"]]					= 1239,
+		[NL["Webbed Ironclaw"]]					= 1239, -- This isn't a node, its a spell. Webbed Ore Deposit object id 430352 contains Ironclaw. (Maybe. Wowhead shows locations, but not what comes from it yet.)
 		[NL["EZ-Mine Ironclaw"]]				= 1240,
 		[NL["Ironclaw Seam"]]					= 1241,
+
+		[NL["Webbed Ore Deposit"]]				= 1242, -- Adding this here to at least get nodes tracked. This could be one of three types of node.
 	},
 	["Extract Gas"] = {
 		[NL["Windy Cloud"]] 					= 301,
@@ -1119,6 +1121,7 @@ local node_textures = {
 		[1239] = icon_path.."Mine\\tin.tga",
 		[1240] = icon_path.."Mine\\tin.tga",
 		[1241] = icon_path.."Mine\\tin.tga",
+		[1242] = icon_path.."Mine\\tin.tga",
 	},
 	["Extract Gas"] = {
 		[301] = icon_path.."Gas\\windy_cloud.tga",
@@ -1554,6 +1557,7 @@ local node_expansion = {
 		[1239] = TWW,
 		[1240] = TWW,
 		[1241] = TWW,
+		[1242] = TWW,
 	},
 	["Herb Gathering"] = {
 		[401] = CLASSIC,
