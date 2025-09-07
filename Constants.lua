@@ -312,6 +312,10 @@ local node_ids = {
 		[NL["Ironclaw Seam"]]					= 1241,
 
 		[NL["Webbed Ore Deposit"]]				= 1242,
+
+-- 11.2 additions
+		[NL["Desolate Deposit"]]				= 1243,
+		[NL["Rich Desolate Deposit"]]			= 1244,
 	},
 	["Extract Gas"] = {
 		[NL["Windy Cloud"]] 					= 301,
@@ -519,6 +523,10 @@ local node_ids = {
 		[NL["Crystallized Arathor's Spear"]]	= 1476,
 		[NL["Altered Arathor's Spear"]]			= 1477,
 		[NL["Camouflaged Arathor's Spear"]]		= 1478,
+
+-- 11.2 additions
+		[NL["Phantom Bloom"]]					= 1479,
+		[NL["Lush Phantom Bloom"]]				= 1480,
 	},
 	["Treasure"] = {
 		[NL["Giant Clam"]] 						= 501,
@@ -1120,7 +1128,10 @@ local node_textures = {
 		[1239] = icon_path.."Mine\\ironclaw.tga",
 		[1240] = icon_path.."Mine\\ironclaw.tga",
 		[1241] = icon_path.."Mine\\ironclaw.tga",
+-- TODO
 		[1242] = icon_path.."Mine\\tin.tga", -- webbed deposit
+		[1243] = icon_path.."Mine\\tin.tga",
+		[1244] = icon_path.."Mine\\tin.tga",
 	},
 	["Extract Gas"] = {
 		[301] = icon_path.."Gas\\windy_cloud.tga",
@@ -1269,7 +1280,6 @@ local node_textures = {
 		[1436] = icon_path.."Herb\\bubblepoppy.tga",
 		[1437] = icon_path.."Herb\\saxifrage.tga",
 		[1438] = icon_path.."Herb\\writhebark.tga",
-		-- TODO
 		[1439] = icon_path.."Herb\\mycobloom.tga",
 		[1440] = icon_path.."Herb\\mycobloom.tga",
 		[1441] = icon_path.."Herb\\mycobloom.tga",
@@ -1310,6 +1320,9 @@ local node_textures = {
 		[1476] = icon_path.."Herb\\arathorsspear.tga",
 		[1477] = icon_path.."Herb\\arathorsspear.tga",
 		[1478] = icon_path.."Herb\\arathorsspear.tga",
+-- TODO
+		[1479] = icon_path.."Herb\\mycobloom.tga",
+		[1480] = icon_path.."Herb\\mycobloom.tga",
 	},
 	["Treasure"] = {
 		[501] = icon_path.."Treasure\\clam.tga",
@@ -1557,6 +1570,8 @@ local node_expansion = {
 		[1240] = TWW,
 		[1241] = TWW,
 		[1242] = TWW,
+		[1243] = TWW,
+		[1244] = TWW,
 	},
 	["Herb Gathering"] = {
 		[401] = CLASSIC,
@@ -1736,6 +1751,8 @@ local node_expansion = {
 		[1476] = TWW,
 		[1477] = TWW,
 		[1478] = TWW,
+		[1479] = TWW,
+		[1480] = TWW,
 	},
 }
 GatherMate.nodeExpansion = node_expansion
