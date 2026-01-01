@@ -158,6 +158,21 @@ local node_ids = {
 		[NL["Royal Ripple"]]					= 1128,
 		[NL["Shore Treasure"]]					= 1129,
 		[NL["Floating Deep Treasure"]]			= 1130,
+		-- Midnight pools
+		[NL["Bloom Swarm"]]						= 1131,
+		[NL["Blossoming Torrent"]]				= 1132,
+		[NL["Bubbling Bloom"]]					= 1133,
+		[NL["Hunter Surge"]]					= 1134,
+		[NL["Lashing Waves"]]					= 1135,
+		[NL["Obscured School"]]					= 1136,
+		[NL["Salmon Pool"]]						= 1137,
+		[NL["Song Swarm"]]						= 1138,
+		[NL["Sunbath School"]]					= 1139,
+		[NL["Sunwell Swarm"]]					= 1140,
+		[NL["Surface Ripple"]]					= 1141,
+		[NL["Careless Cargo"]]					= 1142,
+		[NL["Lost Treasures"]]					= 1143,
+		[NL["Viscous Void"]]					= 1144,
 	},
 	["Mining"] = {
 		[NL["Copper Vein"]] 					= 201,
@@ -247,19 +262,25 @@ local node_ids = {
 		[NL["Oxxein Deposit"]]					= 277,
 		[NL["Rich Oxxein Deposit"]]				= 278,
 		--[NL["Monolithic Oxxein Deposit"]]		= 279,
-		[NL["Elethium Deposit"]]				= 280,
-		[NL["Rich Elethium Deposit"]]			= 281,
+		[NL["Elethium Deposit"]]				= {
+			id = 280,
+			variants = {
+				NL["Rich Elethium Deposit"], NL["Elusive Elethium Deposit"], NL["Elusive Rich Elethium Deposit"]
+			},
+			old_ids = { 281, 291, 292 },
+		},
 		[NL["Solenium Deposit"]]				= 282,
 		[NL["Rich Solenium Deposit"]]			= 283,
 		[NL["Sinvyr Deposit"]]					= 284,
 		[NL["Rich Sinvyr Deposit"]]				= 285,
 		--[NL["Menacing Sinvyr Deposit"]]			= 286,
-		[NL["Progenium Deposit"]]				= 287,
-		[NL["Rich Progenium Deposit"]]			= 288,
-		[NL["Elusive Progenium Deposit"]]		= 289,
-		[NL["Elusive Rich Progenium Deposit"]]	= 290,
-		[NL["Elusive Elethium Deposit"]]		= 291,
-		[NL["Elusive Rich Elethium Deposit"]]	= 292,
+		[NL["Progenium Deposit"]]				= {
+			id = 287,
+			variants = {
+				NL["Rich Progenium Deposit"], NL["Elusive Progenium Deposit"], NL["Elusive Rich Progenium Deposit"]
+			},
+			old_ids = { 288, 289, 290 },
+		},
 -- dragonflight nodes
 		[NL["Serevite Seam"]]					= 1200,
 		[NL["Serevite Deposit"]]				= {
@@ -313,8 +334,30 @@ local node_ids = {
 		[NL["Desolate Deposit"]]				= {
 			id = 1243,
 			variants = { NL["Rich Desolate Deposit"] },
-			old_ods = { 1244 },
+			old_ids = { 1244 },
 		},
+-- midnight nodes
+		[NL["Brilliant Silver"]] = {
+			id = 1245,
+			variants = {
+				NL["Rich Brilliant Silver"], NL["Lightfused Brilliant Silver"], NL["Primal Brilliant Silver"], NL["Voidbound Brilliant Silver"], NL["Wild Brilliant Silver"]
+			}
+		},
+		[NL["Brilliant Silver Seam"]] = 1246,
+		[NL["Refulgent Copper"]] = {
+			id = 1247,
+			variants = {
+				NL["Rich Refulgent Copper"], NL["Lightfused Refulgent Copper"], NL["Primal Refulgent Copper"], NL["Voidbound Refulgent Copper"], NL["Wild Refulgent Copper"]
+			}
+		},
+		[NL["Refulgent Copper Seam"]] = 1248,
+		[NL["Umbral Tin"]] = {
+			id = 1249,
+			variants = {
+				NL["Rich Umbral Tin"], NL["Lightfused Umbral Tin"], NL["Primal Umbral Tin"], NL["Voidbound Umbral Tin"], NL["Wild Umbral Tin"]
+			}
+		},
+		[NL["Umbral Tin Seam"]] = 1250,
 	},
 	["Extract Gas"] = {
 		[NL["Windy Cloud"]] 					= 301,
@@ -518,6 +561,37 @@ local node_ids = {
 			variants = { NL["Lush Phantom Bloom"] },
 			old_ids = { 1480 },
 		},
+-- midnight nodes
+		[NL["Argentleaf"]] = {
+			id = 1481,
+			variants = {
+				NL["Lush Argentleaf"], NL["Lightfused Argentleaf"], NL["Primal Argentleaf"], NL["Transplanted Argentleaf"], NL["Transplanted Lush Argentleaf"], NL["Voidbound Argentleaf"], NL["Wild Argentleaf"]
+			}
+		},
+		[NL["Azeroot"]] = {
+			id = 1482,
+			variants = {
+				NL["Lush Azeroot"], NL["Lightfused Azeroot"], NL["Primal Azeroot"], NL["Transplanted Azeroot"], NL["Transplanted Lush Azeroot"], NL["Voidbound Azeroot"], NL["Wild Azeroot"]
+			}
+		},
+		[NL["Mana Lily"]] = {
+			id = 1483,
+			variants = {
+				NL["Lush Mana Lily"], NL["Lightfused Mana Lily"], NL["Primal Mana Lily"], NL["Transplanted Mana Lily"], NL["Transplanted Lush Mana Lily"], NL["Voidbound Mana Lily"], NL["Wild Mana Lily"]
+			}
+		},
+		[NL["Sanguithorn"]] = {
+			id = 1484,
+			variants = {
+				NL["Lush Sanguithorn"], NL["Lightfused Sanguithorn"], NL["Primal Sanguithorn"], NL["Transplanted Sanguithorn"], NL["Transplanted Lush Sanguithorn"], NL["Voidbound Sanguithorn"], NL["Wild Sanguithorn"]
+			}
+		},
+		[NL["Tranquility Bloom"]] = {
+			id = 1485,
+			variants = {
+				NL["Lush Tranquility Bloom"], NL["Lightfused Tranquility Bloom"], NL["Primal Tranquility Bloom"], NL["Transplanted Tranquility Bloom"], NL["Transplanted Lush Tranquility Bloom"], NL["Voidbound Tranquility Bloom"], NL["Wild Tranquility Bloom"]
+			}
+		},
 	},
 	["Treasure"] = {
 		[NL["Giant Clam"]] 						= 501,
@@ -589,6 +663,8 @@ local node_ids = {
 		[NL["Large Jelly Deposit"]]				= 564,
 		-- Shadowlands
 		[NL["Ground Wart"]]						= 565,
+		-- The War Within
+		[NL["Disturbed Earth"]]					= 566,
 	},
 	["Archaeology"] = {
 		-- cata archeolgy objects
@@ -622,6 +698,20 @@ local node_ids = {
 		[NL["Small Timber"]]					= 701,
 		[NL["Timber"]]							= 702,
 		[NL["Large Timber"]]					= 703,
+		-- TWW 11.2.7
+		[NL["Ironwood Lumber"]]					= 704, -- itemId 245586; Classic Areas
+		[NL["Olemba Lumber"]]					= 705, -- itemId 242691; BC Areas
+		[NL["Coldwind Lumber"]]					= 706, -- itemId 251762; Wotlk Areas
+		[NL["Ashwood Lumber"]]					= 707, -- itemId 251764; Cata Areas
+		[NL["Bamboo Lumber"]]					= 708, -- itemId 251763; MoP Areas
+		[NL["Shadowmoon Lumber"]]				= 709, -- itemId 251766; Draenor (By vendor for Olemba Lumber 1:1)
+		[NL["Fel-Touched Lumber"]]				= 710, -- itemId 251767; Legion Areas
+		[NL["Darkpine Lumber"]]					= 711, -- itemId 251768; BfA Areas
+		[NL["Arden Lumber"]]					= 712, -- itemId 251772; Shadowlands Areas
+		[NL["Dragonpine Lumber"]]				= 713, -- itemId 251773; Dragon Isles Areas
+		[NL["Dornic Fir Lumber"]]				= 714, -- itemId 248012; Kaz Algar Areas
+		-- coming soon with Midnight
+		[NL["Thalassian Lumber"]]				= 715, -- itemId 256963; Midnight Areas?
 	},
 }
 GatherMate.nodeIDs, GatherMate.reverseNodeIDs, GatherMate.nodeIDReplacementMap = GatherMate:CreateNodeLookupTables(node_ids)
@@ -673,22 +763,10 @@ local rare_spawns = {
 	[276] = {[275]=true}, -- rich phaedrum deposit
 	[278] = {[277]=true}, -- rich oxxein deposit
 	[280] = {[273]=true,[274]=true,[275]=true,[276]=true,[277]=true,[278]=true,[282]=true,[283]=true,[284]=true,[285]=true}, -- elethium deposit
-	[281] = {[280]=true,[273]=true,[274]=true,[275]=true,[276]=true,[277]=true,[278]=true,[282]=true,[283]=true,[284]=true,[285]=true}, -- rich elethium deposit
 	[283] = {[282]=true}, -- rich solenium deposit
 	[285] = {[284]=true}, -- rich sinvyr deposit
 	[494] = {[493]=true,[495]=true,[496]=true,[497]=true,[498]=true}, -- nightshade
-	[1401] = {[494]=true,[493]=true,[495]=true,[496]=true,[497]=true,[498]=true}, -- lush nightshade
-	[1402] = {[494]=true,[493]=true,[495]=true,[496]=true,[497]=true,[498]=true}, -- elusive nightshade
-	[1403] = {[499]=true}, -- lush first flower
-	[1404] = {[499]=true}, -- elusive first flower
-	[1405] = {[499]=true, [1404]=true}, -- lush elusive first flower
-	[1406] = {[494]=true,[1402]=true,[493]=true,[495]=true,[496]=true,[497]=true,[498]=true}, -- lush elusive nightshade
 	[493] = {[495]=true,[496]=true,[497]=true,[498]=true}, -- death blossom shares spawn with zone-specific herbs
-	[288] = {[287]=true}, -- rich progenium
-	[289] = {[287]=true}, -- elusive progenium
-	[290] = {[287]=true,[288]=true,[289]=true}, -- elusive rich progenium
-	[291] = {[280]=true}, -- elusive elethium
-	[292] = {[280]=true,[281]=true,[291]=true}, -- elusive rich elethium
 
 	[1407] = {[1414]=true,[1421]=true,[1428]=true}, -- Hochenblume is a common spawn of the other herbs
 	[1439] = {[1447]=true,[1455]=true,[1463]=true,[1471]=true}, -- Mycobloom is a common shared spawn with other TWW herbs
@@ -849,6 +927,20 @@ local node_textures = {
 		[1128] = icon_path.."Fish\\fish_hook.tga",
 		[1129] = icon_path.."Fish\\debris.tga",
 		[1130] = icon_path.."Fish\\debris.tga",
+		[1131] = icon_path.."Fish\\fish_hook.tga",
+		[1132] = icon_path.."Fish\\fish_hook.tga",
+		[1133] = icon_path.."Fish\\fish_hook.tga",
+		[1134] = icon_path.."Fish\\fish_hook.tga",
+		[1135] = icon_path.."Fish\\fish_hook.tga",
+		[1136] = icon_path.."Fish\\fish_hook.tga",
+		[1137] = icon_path.."Fish\\fish_hook.tga",
+		[1138] = icon_path.."Fish\\fish_hook.tga",
+		[1139] = icon_path.."Fish\\fish_hook.tga",
+		[1140] = icon_path.."Fish\\fish_hook.tga",
+		[1141] = icon_path.."Fish\\fish_hook.tga",
+		[1142] = icon_path.."Fish\\debris.tga",
+		[1143] = icon_path.."Fish\\debris.tga",
+		[1144] = icon_path.."Fish\\fish_hook.tga",
 	},
 	["Mining"] = {
 		[201] = icon_path.."Mine\\copper.tga",
@@ -955,6 +1047,12 @@ local node_textures = {
 		[1241] = icon_path.."Mine\\ironclaw.tga",
 		[1242] = icon_path.."Mine\\tin.tga", -- webbed deposit
 		[1243] = icon_path.."Mine\\karesh.tga",
+		[1245] = icon_path.."Mine\\brilliantsilver.tga",
+		[1246] = icon_path.."Mine\\brilliantsilver.tga",
+		[1247] = icon_path.."Mine\\refulgentcopper.tga",
+		[1248] = icon_path.."Mine\\refulgentcopper.tga",
+		[1249] = icon_path.."Mine\\umbraltin.tga",
+		[1250] = icon_path.."Mine\\umbraltin.tga",
 	},
 	["Extract Gas"] = {
 		[301] = icon_path.."Gas\\windy_cloud.tga",
@@ -1075,6 +1173,11 @@ local node_textures = {
 		[1463] = icon_path.."Herb\\orbinid.tga",
 		[1471] = icon_path.."Herb\\arathorsspear.tga",
 		[1479] = icon_path.."Herb\\phantombloom.tga",
+		[1481] = icon_path.."Herb\\argentleaf.tga",
+		[1482] = icon_path.."Herb\\azeroot.tga",
+		[1483] = icon_path.."Herb\\manalily.tga",
+		[1484] = icon_path.."Herb\\sanguithorn.tga",
+		[1485] = icon_path.."Herb\\tranquilitybloom.tga",
 	},
 	["Treasure"] = {
 		[501] = icon_path.."Treasure\\clam.tga",
@@ -1142,6 +1245,7 @@ local node_textures = {
 		[563] = icon_path.."Treasure\\honey.tga",
 		[564] = icon_path.."Treasure\\honey.tga",
 		[565] = icon_path.."Treasure\\hide.tga",
+		[566] = icon_path.."Treasure\\soil.tga",
 	},
 	["Archaeology"] = {
 		[601] = icon_path.."Archaeology\\shovel.tga",
@@ -1170,6 +1274,18 @@ local node_textures = {
 		[701] = icon_path.."Logging\\timber.tga",
 		[702] = icon_path.."Logging\\timber.tga",
 		[703] = icon_path.."Logging\\timber.tga",
+		[704] = icon_path.."Logging\\timber.tga",
+		[705] = icon_path.."Logging\\timber.tga",
+		[706] = icon_path.."Logging\\timber.tga",
+		[707] = icon_path.."Logging\\timber.tga",
+		[708] = icon_path.."Logging\\timber.tga",
+		[709] = icon_path.."Logging\\timber.tga",
+		[710] = icon_path.."Logging\\timber.tga",
+		[711] = icon_path.."Logging\\timber.tga",
+		[712] = icon_path.."Logging\\timber.tga",
+		[713] = icon_path.."Logging\\timber.tga",
+		[714] = icon_path.."Logging\\timber.tga",
+		[715] = icon_path.."Logging\\timber.tga",
 	},
 }
 GatherMate.nodeTextures = node_textures
@@ -1185,6 +1301,7 @@ local BFA     = 8
 local SL      = 9
 local DF      = 10
 local TWW     = 11
+local MN      = 12
 local node_expansion = {
 	["Mining"] = {
 		[201] = CLASSIC,
@@ -1291,6 +1408,12 @@ local node_expansion = {
 		[1241] = TWW,
 		[1242] = TWW,
 		[1243] = TWW,
+		[1245] = MN,
+		[1246] = MN,
+		[1247] = MN,
+		[1248] = MN,
+		[1249] = MN,
+		[1250] = MN,
 	},
 	["Herb Gathering"] = {
 		[401] = CLASSIC,
@@ -1402,6 +1525,11 @@ local node_expansion = {
 		[1463] = TWW,
 		[1471] = TWW,
 		[1479] = TWW,
+		[1481] = MN,
+		[1482] = MN,
+		[1483] = MN,
+		[1484] = MN,
+		[1485] = MN,
 	},
 }
 GatherMate.nodeExpansion = node_expansion
